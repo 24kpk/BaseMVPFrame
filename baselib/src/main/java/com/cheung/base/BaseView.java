@@ -15,5 +15,5 @@ package com.cheung.base;
  * @description: BaseView UI通用基类
  */
 public interface BaseView {
-    void showToast(String msg);// 展示Toast
+    void showToast(String msg);//
 }
