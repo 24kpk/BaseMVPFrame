@@ -27,4 +27,10 @@ dependencies {
     implementation 'com.qmuiteam:qmui:2.0.0-alpha02'
     //MVP
     implementation project(path: ':baselib')
+    //viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //BRVAH
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+    //MMKV
+    implementation 'com.tencent:mmkv:1.0.23'
 }

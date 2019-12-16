@@ -15,7 +15,6 @@ package com.cheung.base;
  * @description: BasePresenter 业务定义基类
  */
 public class BasePresenter<V extends BaseView> {
-
     protected V mView;
 
     /**
