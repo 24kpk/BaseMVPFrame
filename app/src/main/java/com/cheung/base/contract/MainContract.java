@@ -11,7 +11,7 @@
 package com.cheung.base.contract;
 
 
-import com.cheung.base.BaseView;
+import com.cheung.base.base.BaseView;
 
 public interface MainContract {
 

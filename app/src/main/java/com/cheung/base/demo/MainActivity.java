@@ -13,9 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
-import com.cheung.base.BaseMvpActivity;
+import com.cheung.base.base.BaseMvpActivity;
 import com.cheung.base.contract.MainContract;
 import com.cheung.base.presenter.MainPresenter;
 import com.tencent.mmkv.MMKV;
@@ -23,9 +21,14 @@ import com.tencent.mmkv.MMKV;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View, View.OnClickListener {
+    @BindView(R.id.view_pager2)
     ViewPager2 viewPager2;
 
+    @BindView(R.id.btn_load)
     Button btnLoad;
     MMKV kv = MMKV.defaultMMKV();
     @Override
@@ -41,12 +44,11 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
 
     @Override
     public void initView() {
-        btnLoad = findViewById(R.id.btn_load);
+        ButterKnife.bind(this);
         btnLoad.setOnClickListener(this);
-        viewPager2 = findViewById(R.id.view_pager2);
         viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
         List<String> da = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 16; i++) {
             da.add("STR:" + i);
         }
         ViewPage2Adapter adapter = new ViewPage2Adapter(da, mContext);

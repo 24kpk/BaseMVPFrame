@@ -8,7 +8,7 @@
  *
  */
 
-package com.cheung.base;
+package com.cheung.base.base;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,6 +18,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import butterknife.ButterKnife;
 
 /**
  * @version: V1.0

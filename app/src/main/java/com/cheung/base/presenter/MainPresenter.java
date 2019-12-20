@@ -11,9 +11,11 @@
 package com.cheung.base.presenter;
 
 
-import com.cheung.base.BasePresenter;
+import com.cheung.base.base.BasePresenter;
 import com.cheung.base.contract.MainContract;
 import com.cheung.base.model.MainModel;
+
+import butterknife.ButterKnife;
 
 
 public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
